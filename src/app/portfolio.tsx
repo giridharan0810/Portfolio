@@ -41,14 +41,14 @@ const projects = [
   repo: "https://github.com/giridharan0810/E-commerce-Website",
 },
 
-  {
-    title: "Smart Billing UI",
-    description:
-      "Printable multi‑section invoice system with tax summaries and thermal receipt layout.",
-    tags: ["React", "Print", "UX"],
-    link: "#",
-    repo: "https://github.com/giridharan0810/Portfolio.git",
-  },
+ {
+  title: "Giri Portfolio",
+  description:
+    "A modern, responsive portfolio website built with Next.js, Tailwind CSS, Framer Motion, and Firebase, showcasing my projects, skills, and live demos.",
+  tags: ["Next.js", "React", "Tailwind", "Framer Motion", "Firebase", "UI/UX"],
+  link: "https://e-commerce-website-flame-two.vercel.app/", 
+  repo: "https://github.com/giridharan0810/Portfolio.git",
+}
   // {
   //   title: "Event Hub",
   //   description:
@@ -348,7 +348,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight md:text-6xl"
           >
-            Hi, I'm <span className="bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+            Hi, I&apos;m <span className="bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
               <Typewriter text="Giridharan" delay={100} />
             </span>
           </motion.h1>
