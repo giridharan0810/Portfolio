@@ -42,11 +42,11 @@ const projects = [
 },
 
  {
-  title: "Giri Portfolio",
+  title: "My Portfolio",
   description:
     "A modern, responsive portfolio website built with Next.js, Tailwind CSS, Framer Motion, and Firebase, showcasing my projects, skills, and live demos.",
   tags: ["Next.js", "React", "Tailwind", "Framer Motion", "Firebase", "UI/UX"],
-  link: "https://e-commerce-website-flame-two.vercel.app/", 
+  link: "https://portfolio-h9rf.vercel.app/", 
   repo: "https://github.com/giridharan0810/Portfolio.git",
 }
   // {
