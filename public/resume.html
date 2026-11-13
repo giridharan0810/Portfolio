@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Giridharan S - Full Stack Developer Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.42;
+      font-size: 10.5pt;
+      background: #ffffff;
+    }
+    .header {
+      margin-bottom: 12px;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 8px;
+    }
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+    .title {
+      font-size: 13pt;
+      font-weight: 600;
+      color: #1e40af;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 4px;
+      column-gap: 16px;
+      font-size: 9.5pt;
+      color: #334155;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-item a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-top: 13px;
+      margin-bottom: 8px;
+    }
+    .summary-text {
+      font-size: 9.5pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.45;
+    }
+    .exp-item {
+      margin-bottom: 11px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    .exp-role-company {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .exp-role {
+      font-weight: 600;
+      color: #1e40af;
+    }
+    .exp-meta {
+      font-size: 9pt;
+      font-weight: 500;
+      color: #64748b;
+    }
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 17px;
+      margin-top: 3px;
+    }
+    ul.bullets li {
+      font-size: 9.3pt;
+      color: #334155;
+      margin-bottom: 2.5px;
+      line-height: 1.38;
+    }
+    .skill-category {
+      font-size: 9.3pt;
+      margin-bottom: 4px;
+      color: #334155;
+    }
+    .skill-category strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+    .project-item {
+      margin-bottom: 9px;
+    }
+    .project-header {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .project-tech {
+      font-size: 8.8pt;
+      font-weight: normal;
+      font-style: italic;
+      color: #475569;
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.8pt;
+    }
+    .edu-inst {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-degree {
+      font-size: 9.3pt;
+      color: #334155;
+      margin-top: 2px;
+    }
+    .soft-skills-row {
+      display: flex;
+      gap: 20px;
+      font-size: 9.5pt;
+      color: #334155;
+    }
+    .soft-skills-row span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .soft-skills-row span::before {
+      content: "•";
+      color: #1e40af;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="name-row">
+      <h1>GIRIDHARAN S</h1>
+      <span class="title">Full Stack Developer</span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item">✉ giridh2001@gmail.com</div>
+      <div class="contact-item">📞 +91 9080875938</div>
+      <div class="contact-item">📍 Karaikudi, Tamil Nadu, India</div>
+      <div class="contact-item">💼 <a href="https://www.linkedin.com/in/giridharan0810">linkedin.com/in/giridharan0810</a></div>
+      <div class="contact-item">🐙 <a href="https://github.com/giridharan0810">github.com/giridharan0810</a></div>
+      <div class="contact-item">🌐 <a href="https://portfolio-h9rf.vercel.app/">portfolio-h9rf.vercel.app</a></div>
+    </div>
+  </div>
+
+  <div class="section-title">Professional Summary</div>
+  <p class="summary-text">
+    Full Stack Developer with 2 years of experience developing scalable web applications using React.js, TypeScript, JavaScript, Node.js, Express.js, and SQL Server. Experienced in building high-performance REST APIs, implementing JWT authentication, developing robust CRUD operations, and integrating enterprise databases. Contributed to CRM, ERP, and business-critical software solutions across frontend and backend development.
+  </p>
+
+  <div class="section-title">Professional Experience</div>
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-role-company">VConnex Software Solutions &nbsp;|&nbsp; <span class="exp-role">Software Developer</span></span>
+      <span class="exp-meta">Dec 2025 – Present | Remote</span>
+    </div>
+    <ul class="bullets">
+      <li>Develop responsive, user-centric frontend features using React.js and JavaScript.</li>
+      <li>Architect and build RESTful APIs and optimized CRUD operations using Node.js and Express.js.</li>
+      <li>Integrate modular frontend components with backend microservices and Microsoft SQL Server.</li>
+      <li>Implement secure JWT-based authentication and granular role-based access control (RBAC).</li>
+      <li>Develop assigned business features, write complex SQL queries, and resolve cross-stack issues.</li>
+      <li>Contribute to LFMS Insurance CRM, College ERP, and School ERP projects using Git and SourceTree for version control.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-role-company">Dynamic Liquids &nbsp;|&nbsp; <span class="exp-role">Software Developer</span></span>
+      <span class="exp-meta">Dec 2024 – Nov 2025 | Pudukottai</span>
+    </div>
+    <ul class="bullets">
+      <li>Developed responsive, mobile-first web applications using React.js, Next.js, HTML5, CSS3, and JavaScript.</li>
+      <li>Built reusable, high-performance UI components and interactive modules to elevate user experience.</li>
+      <li>Integrated Firebase Authentication and Firestore with real-time data synchronization across client sessions.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Technical Skills</div>
+  <div class="skill-category"><strong>Programming Languages:</strong> JavaScript (ES6+), TypeScript, HTML5, CSS3</div>
+  <div class="skill-category"><strong>Frontend Technologies:</strong> React.js, Next.js, Bootstrap, Tailwind CSS</div>
+  <div class="skill-category"><strong>Backend Technologies:</strong> Node.js, Express.js, RESTful APIs, JWT Auth</div>
+  <div class="skill-category"><strong>Databases:</strong> Microsoft SQL Server, Firebase Firestore, MongoDB (Basic)</div>
+  <div class="skill-category"><strong>Authentication & Security:</strong> JWT, Firebase Authentication, RBAC</div>
+  <div class="skill-category"><strong>Tools & Platforms:</strong> Git, GitHub, SourceTree, Postman, VS Code, ExcelJS</div>
+
+  <div class="section-title">Key Projects</div>
+  <div class="project-item">
+    <div class="project-header">LFMS – Insurance CRM <span class="project-tech">(React.js, TypeScript, Node.js, Express.js, Microsoft SQL Server, ExcelJS)</span></div>
+    <ul class="bullets">
+      <li>Contributed to developing an end-to-end insurance CRM from scratch to manage employees, clients, policies, opportunities, and case workflows.</li>
+      <li>Developed dynamic dashboard analytics and business performance KPIs for role-specific insights.</li>
+      <li>Engineered Contract, Opportunity, and Case modules; built full CRUD operations for Users, Advisors, Carriers, and Products.</li>
+      <li>Implemented database-driven role-based permissions with strict Read, Write, and Delete access controls.</li>
+      <li>Designed normalized SQL Server schemas and implemented high-volume Excel reporting via ExcelJS.</li>
+    </ul>
+  </div>
+
+  <div class="project-item">
+    <div class="project-header">Metric 360 – Integrated Insurance Platform <span class="project-tech">(React.js, Node.js, Express.js, Microsoft SQL Server)</span></div>
+    <ul class="bullets">
+      <li>Contributed to an enterprise insurance consolidation platform unifying data from six independent third-party platforms.</li>
+      <li>Engineered frontend views and backend pipeline features using React.js, Node.js, and Express.js.</li>
+      <li>Developed data synchronization workflows with staging tables, audit logs, and sync status tracking.</li>
+    </ul>
+  </div>
+
+  <div class="project-item">
+    <div class="project-header">ERP – Education Management System <span class="project-tech">(React.js, TypeScript, Node.js, Express.js, Microsoft SQL Server)</span></div>
+    <ul class="bullets">
+      <li>Contributed to multi-tenant education management ERP, participating in technical requirement analysis and architectural workflows.</li>
+      <li>Implemented role-based portals for Students, HODs, Staff, and Administrators with comprehensive CRUD capabilities.</li>
+    </ul>
+  </div>
+
+  <div class="project-item">
+    <div class="project-header">POS Billing Web Application <span class="project-tech">(Next.js, Firebase)</span></div>
+    <ul class="bullets">
+      <li>Engineered a real-time POS billing application featuring product catalog management, sales processing, inventory tracking, and invoice generation.</li>
+    </ul>
+  </div>
+
+  <div class="project-item">
+    <div class="project-header">Learning Management System (LMS) <span class="project-tech">(Next.js, Firebase)</span></div>
+    <ul class="bullets">
+      <li>Built a comprehensive LMS with multi-role access (Admin, Author, Learner), course authoring, payments, and progress tracking.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Education</div>
+  <div class="edu-item">
+    <span class="edu-inst">Mahendra Engineering College, Namakkal</span>
+    <span class="exp-meta">2020 – 2024</span>
+  </div>
+  <div class="edu-degree">Bachelor of Engineering in Computer Science and Engineering &nbsp;|&nbsp; <strong>CGPA: 8.33</strong></div>
+
+  <div class="section-title">Soft Skills</div>
+  <div class="soft-skills-row">
+    <span>Problem Solving</span>
+    <span>Leadership</span>
+    <span>Quick Learner</span>
+    <span>Agile Methodology</span>
+  </div>
+</body>
+</html>

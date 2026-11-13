@@ -1,0 +1,166 @@
+%PDF-1.4
+%ту╧╙
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 7286 >>
+stream
+BT /F1 22.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 783.89 Tm (GIRIDHARAN S) Tj ET
+BT /F1 13.0 Tf 0.200 0.350 0.700 rg 1 0 0 1 223.00 785.89 Tm (Full Stack Developer) Tj ET
+BT /F2 9.0 Tf 0.200 0.250 0.350 rg 1 0 0 1 38.00 761.89 Tm (Email: giridh2001@gmail.com) Tj ET
+BT /F2 9.0 Tf 0.200 0.250 0.350 rg 1 0 0 1 288.00 761.89 Tm (Phone: +91 9080875938) Tj ET
+BT /F2 9.0 Tf 0.200 0.250 0.350 rg 1 0 0 1 38.00 747.89 Tm (Location: Karaikudi, Tamil Nadu, India) Tj ET
+BT /F2 9.0 Tf 0.150 0.350 0.800 rg 1 0 0 1 288.00 747.89 Tm (LinkedIn: linkedin.com/in/giridharan0810) Tj ET
+BT /F2 9.0 Tf 0.150 0.350 0.800 rg 1 0 0 1 38.00 733.89 Tm (GitHub: github.com/giridharan0810) Tj ET
+BT /F2 9.0 Tf 0.150 0.350 0.800 rg 1 0 0 1 288.00 733.89 Tm (Portfolio: https://portfolio-h9rf.vercel.app/) Tj ET
+0.100 0.250 0.550 RG 1.50 w 38.00 725.89 m 557.28 725.89 l S
+BT /F1 11.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 707.89 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.750 0.800 0.880 RG 1.00 w 38.00 703.89 m 557.28 703.89 l S
+BT /F2 9.5 Tf 0.150 0.180 0.220 rg 1 0 0 1 38.00 689.89 Tm (Full Stack Developer with 2 years of experience developing web applications using React.js, JavaScript, Node.js,) Tj ET
+BT /F2 9.5 Tf 0.150 0.180 0.220 rg 1 0 0 1 38.00 676.89 Tm (Express.js and SQL Server. Experienced in building REST APIs, implementing JWT authentication, developing CRUD) Tj ET
+BT /F2 9.5 Tf 0.150 0.180 0.220 rg 1 0 0 1 38.00 663.89 Tm (operations and integrating databases. Contributed to CRM, ERP and business applications across frontend and) Tj ET
+BT /F2 9.5 Tf 0.150 0.180 0.220 rg 1 0 0 1 38.00 650.89 Tm (backend development.) Tj ET
+BT /F1 11.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 629.89 Tm (PROFESSIONAL EXPERIENCE) Tj ET
+0.750 0.800 0.880 RG 1.00 w 38.00 625.89 m 557.28 625.89 l S
+BT /F1 10.5 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 611.89 Tm (VConnex Software Solutions) Tj ET
+BT /F3 10.0 Tf 0.250 0.350 0.650 rg 1 0 0 1 186.00 611.89 Tm (, Software Developer) Tj ET
+BT /F2 9.0 Tf 0.400 0.450 0.500 rg 1 0 0 1 412.28 611.89 Tm (Dec 2025 - Present | Remote) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 597.89 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 597.89 Tm (Develop responsive frontend features using React.js and JavaScript.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 584.39 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 584.39 Tm (Build RESTful APIs and CRUD operations using Node.js and Express.js.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 570.89 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 570.89 Tm (Integrate frontend components with backend APIs and Microsoft SQL Server.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 557.39 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 557.39 Tm (Implement JWT authentication and role-based access control.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 543.89 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 543.89 Tm (Develop assigned features, write SQL queries and resolve frontend/backend issues.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 530.39 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 530.39 Tm (Contribute to LFMS Insurance CRM, College ERP and School ERP projects; use Git and SourceTree for version control.) Tj ET
+BT /F1 10.5 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 510.89 Tm (Dynamic Liquids) Tj ET
+BT /F3 10.0 Tf 0.250 0.350 0.650 rg 1 0 0 1 130.00 510.89 Tm (, Software Developer) Tj ET
+BT /F2 9.0 Tf 0.400 0.450 0.500 rg 1 0 0 1 392.28 510.89 Tm (Dec 2024 - Nov 2025 | Pudukottai) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 496.89 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 496.89 Tm (Developed responsive web applications using React.js, Next.js, HTML, CSS and JavaScript.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 483.39 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 483.39 Tm (Built reusable UI components and interactive features to improve application usability.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 469.89 Tm (Х) Tj ET
+BT /F2 9.2 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 469.89 Tm (Integrated Firebase Authentication and Firestore; implemented data synchronization and used Git/GitHub for version control.) Tj ET
+BT /F1 11.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 448.39 Tm (TECHNICAL SKILLS) Tj ET
+0.750 0.800 0.880 RG 1.00 w 38.00 444.39 m 557.28 444.39 l S
+BT /F1 9.3 Tf 0.100 0.120 0.180 rg 1 0 0 1 38.00 430.39 Tm (Programming Languages: ) Tj ET
+BT /F2 9.3 Tf 0.200 0.250 0.300 rg 1 0 0 1 178.00 430.39 Tm (JavaScript \(ES6+\), TypeScript, HTML5, CSS3) Tj ET
+BT /F1 9.3 Tf 0.100 0.120 0.180 rg 1 0 0 1 38.00 416.89 Tm (Frontend Technologies: ) Tj ET
+BT /F2 9.3 Tf 0.200 0.250 0.300 rg 1 0 0 1 178.00 416.89 Tm (React.js, Next.js, Bootstrap, Tailwind CSS) Tj ET
+BT /F1 9.3 Tf 0.100 0.120 0.180 rg 1 0 0 1 38.00 403.39 Tm (Backend Technologies: ) Tj ET
+BT /F2 9.3 Tf 0.200 0.250 0.300 rg 1 0 0 1 178.00 403.39 Tm (Node.js, Express.js, RESTful APIs) Tj ET
+BT /F1 9.3 Tf 0.100 0.120 0.180 rg 1 0 0 1 38.00 389.89 Tm (Databases: ) Tj ET
+BT /F2 9.3 Tf 0.200 0.250 0.300 rg 1 0 0 1 178.00 389.89 Tm (Microsoft SQL Server, Firebase Firestore, MongoDB \(Basic\)) Tj ET
+BT /F1 9.3 Tf 0.100 0.120 0.180 rg 1 0 0 1 38.00 376.39 Tm (Authentication: ) Tj ET
+BT /F2 9.3 Tf 0.200 0.250 0.300 rg 1 0 0 1 178.00 376.39 Tm (JWT, Firebase Authentication) Tj ET
+BT /F1 9.3 Tf 0.100 0.120 0.180 rg 1 0 0 1 38.00 362.89 Tm (Tools & Platforms: ) Tj ET
+BT /F2 9.3 Tf 0.200 0.250 0.300 rg 1 0 0 1 178.00 362.89 Tm (Git, GitHub, SourceTree, Postman, VS Code) Tj ET
+BT /F1 11.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 341.39 Tm (PROJECTS) Tj ET
+0.750 0.800 0.880 RG 1.00 w 38.00 337.39 m 557.28 337.39 l S
+BT /F1 10.0 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 323.39 Tm (LFMS - Insurance CRM) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.500 rg 1 0 0 1 153.00 323.39 Tm (, Technologies: React.js, TypeScript, Node.js, Express.js, Microsoft SQL Server, ExcelJS) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 310.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 310.39 Tm (Contributed to developing an insurance CRM application from scratch to manage employees, clients, contracts, opportunities and case management.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 297.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 297.89 Tm (Developed dashboard features and business statistics for role-specific insights.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 285.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 285.39 Tm (Built Contract, Opportunity and Case Management modules and implemented CRUD functionality for User, Advisor, Carrier and Product management.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 272.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 272.89 Tm (Implemented database-driven role-based permissions with Read, Write and Delete access controls.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 260.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 260.39 Tm (Designed SQL Server relational tables and implemented Excel export functionality using ExcelJS.) Tj ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 4901 >>
+stream
+BT /F3 9.0 Tf 0.400 0.450 0.550 rg 1 0 0 1 38.00 788.89 Tm (GIRIDHARAN S - Full Stack Developer) Tj ET
+0.800 0.850 0.900 RG 0.80 w 38.00 782.89 m 557.28 782.89 l S
+BT /F1 10.0 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 764.89 Tm (Metric 360 - Integrated Insurance Platform) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.500 rg 1 0 0 1 263.00 764.89 Tm (, Technologies: React.js, Node.js, Express.js, Microsoft SQL Server) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 751.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 751.89 Tm (Contribute to an insurance management platform designed to consolidate data from six independent third-party applications.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 739.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 739.39 Tm (Develop and enhance frontend and backend features using React.js, Node.js and Express.js.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 726.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 726.89 Tm (Participate in planning and developing data synchronization workflows, including staging tables and synchronization status tracking.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 714.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 714.39 Tm (Troubleshoot application issues and implement assigned feature improvements.) Tj ET
+BT /F1 10.0 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 695.89 Tm (ERP - Education Management System) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.500 rg 1 0 0 1 253.00 695.89 Tm (, Technologies: React.js, TypeScript, Node.js, Express.js, Microsoft SQL Server) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 682.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 682.89 Tm (Contribute to the initial development of an education management ERP system, participating in requirement discussions and application workflow planning.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 670.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 670.39 Tm (Implemented role-based login functionality for Student, HOD, Staff and Admin users; currently involved in developing CRUD operations for ERP modules.) Tj ET
+BT /F1 10.0 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 651.89 Tm (POS Billing Web Application) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.500 rg 1 0 0 1 198.00 651.89 Tm (, Technologies: Next.js, Firebase) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 638.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 638.89 Tm (Developed a POS billing application with secure authentication, real-time database synchronization, product management, sales processing and inventory tracking.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 626.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 626.39 Tm (Implemented invoice generation, ledger management and daily/monthly sales reporting with a responsive user interface.) Tj ET
+BT /F1 10.0 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 607.89 Tm (Learning Management System \(LMS\)) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.500 rg 1 0 0 1 238.00 607.89 Tm (, Technologies: Next.js, Firebase) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 594.89 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 594.89 Tm (Developed an LMS platform with secure authentication, course management and separate dashboards for Admin, Author and User roles.) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 46.00 582.39 Tm (Х) Tj ET
+BT /F2 8.8 Tf 0.180 0.200 0.250 rg 1 0 0 1 58.00 582.39 Tm (Implemented course uploads, paid and free course modules, course purchases, student enrollment and learning progress tracking.) Tj ET
+BT /F1 11.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 553.89 Tm (EDUCATION) Tj ET
+0.750 0.800 0.880 RG 1.00 w 38.00 549.89 m 557.28 549.89 l S
+BT /F1 10.0 Tf 0.080 0.150 0.350 rg 1 0 0 1 38.00 535.89 Tm (Mahendra Engineering College, Namakkal) Tj ET
+BT /F2 9.5 Tf 0.400 0.450 0.500 rg 1 0 0 1 482.28 535.89 Tm (2020 - 2024) Tj ET
+BT /F2 9.5 Tf 0.180 0.200 0.250 rg 1 0 0 1 38.00 521.89 Tm (Bachelor of Computer Science and Engineering - CGPA: 8.33) Tj ET
+BT /F1 11.0 Tf 0.080 0.150 0.450 rg 1 0 0 1 38.00 501.89 Tm (SOFT SKILLS) Tj ET
+0.750 0.800 0.880 RG 1.00 w 38.00 497.89 m 557.28 497.89 l S
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 38.00 483.89 Tm (Х) Tj ET
+BT /F2 9.5 Tf 0.180 0.200 0.250 rg 1 0 0 1 48.00 483.89 Tm (Problem Solving) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 163.00 483.89 Tm (Х) Tj ET
+BT /F2 9.5 Tf 0.180 0.200 0.250 rg 1 0 0 1 173.00 483.89 Tm (Leadership) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 288.00 483.89 Tm (Х) Tj ET
+BT /F2 9.5 Tf 0.180 0.200 0.250 rg 1 0 0 1 298.00 483.89 Tm (Quick Learner) Tj ET
+BT /F1 10.0 Tf 0.150 0.350 0.700 rg 1 0 0 1 413.00 483.89 Tm (Х) Tj ET
+BT /F2 9.5 Tf 0.180 0.200 0.250 rg 1 0 0 1 423.00 483.89 Tm (Agile Methodology) Tj ET
+
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000229 00000 n 
+0000000326 00000 n 
+0000000431 00000 n 
+0000000583 00000 n 
+0000007921 00000 n 
+0000008073 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+13026
+%%EOF
