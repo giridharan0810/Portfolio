@@ -1,6 +1,22 @@
 /* =========================================================
-   Crafted by Giri - Premium Minimal Developer Loading Screen
+   Crafted by Giri - Exact Reference Typography & Arrow
    ========================================================= */
+
+@font-face {
+  font-family: 'Charm';
+  src: url('/font/Charm-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Charm';
+  src: url('/font/Charm-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
 
 .crafted-loading-screen {
   position: fixed;
@@ -10,8 +26,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #060913;
-  color: #f8fafc;
+  background-color: #0c0b08;
+  color: #ebd078;
   user-select: none;
   overflow: hidden;
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -20,21 +36,21 @@
 /* 1. Center text: CRAFTED BY */
 .crafted-text {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+  font-size: clamp(0.72rem, 1.4vw, 0.88rem);
   font-weight: 600;
   letter-spacing: 0.42em;
   text-transform: uppercase;
-  color: #94a3b8;
-  margin-bottom: 0.85rem;
+  color: #bfa668;
+  margin-bottom: -0.25rem;
   opacity: 0;
-  transform: translateY(6px);
-  animation: craftedFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards,
-             craftedPulse 2.8s ease-in-out 0.95s infinite;
+  transform: translateY(4px);
+  animation: craftedFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards,
+             craftedPulse 2.8s ease-in-out 0.85s infinite;
 }
 
 @keyframes craftedFadeIn {
   to {
-    opacity: 0.85;
+    opacity: 0.88;
     transform: translateY(0);
   }
 }
@@ -48,62 +64,45 @@
   }
 }
 
-/* 2. Signature SVG Canvas */
+/* 2. Signature & Arrow SVG Canvas */
 .signature-svg-container {
-  width: min(440px, 86vw);
+  width: min(520px, 92vw);
   height: auto;
   overflow: visible;
-  filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.3));
+  filter: drop-shadow(0 0 16px rgba(226, 191, 101, 0.35));
 }
 
-/* Phase 2: Handwriting Signature "Giri" */
-.stroke-signature {
-  stroke-dasharray: 750;
-  stroke-dashoffset: 750;
-  animation: drawSignature 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+/* 2a. Handwriting Text Reveal Mask */
+.stroke-reveal-mask {
+  stroke-dasharray: 680;
+  stroke-dashoffset: 680;
+  animation: drawGiriText 1.25s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
 }
 
-@keyframes drawSignature {
+@keyframes drawGiriText {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-/* Phase 3: Delicate Dots for the 'i's */
-.stroke-dots {
-  opacity: 0;
-  animation: dropDots 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) 1.6s forwards;
+/* 2b. The Arched Arrow Shaft */
+.stroke-arrow-shaft {
+  stroke-dasharray: 540;
+  stroke-dashoffset: 540;
+  animation: drawArrowShaft 0.85s cubic-bezier(0.35, 0, 0.2, 1) 1.55s forwards;
 }
 
-@keyframes dropDots {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Phase 4: Sweeping Flourish Curved Arrow */
-.stroke-arrow-curve {
-  stroke-dasharray: 650;
-  stroke-dashoffset: 650;
-  animation: drawArrowCurve 1.05s cubic-bezier(0.4, 0, 0.2, 1) 1.65s forwards;
-}
-
-@keyframes drawArrowCurve {
+@keyframes drawArrowShaft {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-/* Phase 5: Stylish Arrowhead Flick */
+/* 2c. The Stylish Arrowhead */
 .stroke-arrowhead {
-  stroke-dasharray: 80;
-  stroke-dashoffset: 80;
-  animation: drawArrowhead 0.35s ease 2.5s forwards;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  animation: drawArrowhead 0.35s ease 2.32s forwards;
 }
 
 @keyframes drawArrowhead {
@@ -119,7 +118,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #64748b;
+  color: #786b49;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -127,12 +126,12 @@
   border-radius: 9999px;
   transition: all 0.2s ease;
   opacity: 0;
-  animation: fadeInSkip 0.6s ease 1.5s forwards;
+  animation: fadeInSkip 0.6s ease 1.4s forwards;
 }
 
 .skip-loading-btn:hover {
-  color: #cbd5e1;
-  background: rgba(255, 255, 255, 0.05);
+  color: #ebd078;
+  background: rgba(235, 208, 120, 0.08);
 }
 
 @keyframes fadeInSkip {
@@ -144,18 +143,14 @@
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .crafted-text {
-    opacity: 0.85;
+    opacity: 0.88;
     animation: none;
     transform: none;
   }
-  .stroke-signature,
-  .stroke-arrow-curve,
+  .stroke-reveal-mask,
+  .stroke-arrow-shaft,
   .stroke-arrowhead {
     stroke-dashoffset: 0;
-    animation: none;
-  }
-  .stroke-dots {
-    opacity: 1;
     animation: none;
   }
   .skip-loading-btn {
