@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <!-- Background with subtle glow border -->
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="5"/>
+  <!-- Giri Monogram 'G' -->
+  <path d="M 78 40 C 50 40 40 54 40 68 C 40 82 52 96 74 96 C 88 96 94 88 94 76 L 68 76 L 68 64 L 106 64 C 107 72 107 82 98 94 C 88 106 72 108 64 108 C 40 108 26 92 26 68 C 26 44 42 28 78 28 C 92 28 100 32 106 38 L 92 50 C 86 44 82 40 78 40 Z" fill="url(#gGrad)"/>
+</svg>

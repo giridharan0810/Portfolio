@@ -1,0 +1,260 @@
+"use client";
+
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Copy, Check, ArrowRight, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { siteConfig } from "@/data/siteConfig";
+
+export default function ContactSection() {
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleCopy = (text: string, type: "email" | "phone") => {
+    navigator.clipboard.writeText(text);
+    if (type === "email") {
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } else {
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2000);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("idle");
+    setStatusMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      subject: formData.get("subject") as string,
+      message: formData.get("message") as string,
+      _honey: formData.get("_honey") as string,
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const resJson = await response.json();
+
+      if (response.ok && resJson.success) {
+        setStatus("success");
+        setStatusMessage(resJson.message || "Message delivered successfully!");
+        form.reset();
+      } else {
+        throw new Error(resJson.message || "Failed to deliver message.");
+      }
+    } catch (err: unknown) {
+      console.warn("Contact form fallback notice:", err);
+      // Client-side fallback to direct mailto client
+      const fallbackUrl = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
+        data.subject || "Contact from Portfolio"
+      )}&body=${encodeURIComponent(`Hi Giri,\n\nName: ${data.name}\nEmail: ${data.email}\n\n${data.message}`)}`;
+
+      window.location.href = fallbackUrl;
+      setStatus("success");
+      setStatusMessage("Your mail client was opened to complete the transmission directly!");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section id="contact" className="relative z-10 py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-12">
+          {/* Left info column */}
+          <div className="lg:col-span-5 space-y-6">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">Get In Touch</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 dark:text-slate-100 light:text-slate-900 mt-2">
+                Let&apos;s Discuss Software & Collaboration
+              </h2>
+              <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 mt-4 leading-relaxed text-sm sm:text-base">
+                Looking for a Full Stack Developer skilled in React, Node.js, Express, and SQL Server for enterprise applications or engineering teams? Feel free to reach out.
+              </p>
+            </div>
+
+            {/* Direct Cards */}
+            <div className="space-y-3.5 pt-2">
+              {/* Email */}
+              <div className="p-4 rounded-2xl bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-200 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] text-slate-400 dark:text-slate-400 light:text-slate-500 font-medium">Email Address</div>
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      className="text-sm font-semibold text-white dark:text-white light:text-slate-900 hover:text-indigo-400 transition-colors"
+                    >
+                      {siteConfig.email}
+                    </a>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => handleCopy(siteConfig.email, "email")}
+                  className="p-2 rounded-lg bg-slate-800 dark:bg-slate-800 light:bg-slate-200 hover:bg-slate-700 text-slate-300 dark:text-slate-300 light:text-slate-700 transition-colors cursor-pointer"
+                  title="Copy email address"
+                  aria-label="Copy email address"
+                >
+                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                </button>
+              </div>
+
+              {/* Phone */}
+              <div className="p-4 rounded-2xl bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-200 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] text-slate-400 dark:text-slate-400 light:text-slate-500 font-medium">Phone Number</div>
+                    <a
+                      href={`tel:${siteConfig.phone.replace(/\s+/g, "")}`}
+                      className="text-sm font-semibold text-white dark:text-white light:text-slate-900 hover:text-indigo-400 transition-colors"
+                    >
+                      {siteConfig.phone}
+                    </a>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => handleCopy(siteConfig.phone, "phone")}
+                  className="p-2 rounded-lg bg-slate-800 dark:bg-slate-800 light:bg-slate-200 hover:bg-slate-700 text-slate-300 dark:text-slate-300 light:text-slate-700 transition-colors cursor-pointer"
+                  title="Copy phone number"
+                  aria-label="Copy phone number"
+                >
+                  {copiedPhone ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                </button>
+              </div>
+
+              {/* Location */}
+              <div className="p-4 rounded-2xl bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-200 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] text-slate-400 dark:text-slate-400 light:text-slate-500 font-medium">Location</div>
+                  <div className="text-sm font-semibold text-white dark:text-white light:text-slate-900">{siteConfig.location}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right form column */}
+          <div className="lg:col-span-7">
+            <div className="p-8 rounded-3xl border border-slate-800 dark:border-slate-800 light:border-slate-200 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white shadow-xl transition-colors">
+              <h3 className="text-xl font-bold text-white dark:text-white light:text-slate-900 mb-2">Send a Message</h3>
+              <p className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-600 mb-6">
+                Direct inquiry into my inbox. I typically respond within 24 hours.
+              </p>
+
+              {status === "success" && (
+                <div className="mb-6 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs flex items-center gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <span>{statusMessage}</span>
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="mb-6 p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center gap-2.5">
+                  <AlertCircle className="w-4 h-4 shrink-0" />
+                  <span>{statusMessage}</span>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot field for spam prevention */}
+                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      placeholder="Jane Doe"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-white dark:text-white light:text-slate-900 placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                      Your Email *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="jane@example.com"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-white dark:text-white light:text-slate-900 placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Full Stack Opportunity / Engineering Discussion"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-white dark:text-white light:text-slate-900 placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                    Message *
+                  </label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    placeholder="Hello Giri, we have an opportunity for a Full Stack Developer..."
+                    className="w-full px-4 py-3 rounded-xl bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-100 border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-white dark:text-white light:text-slate-900 placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-2xl font-semibold text-sm bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-cyan-500 text-white shadow-lg shadow-indigo-600/30 transition-all cursor-pointer disabled:opacity-50"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
