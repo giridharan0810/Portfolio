@@ -1,5 +1,5 @@
 /* =========================================================
-   Crafted by Giri - Exact Reference Typography & Arrow
+   Crafted by Giri - Luxury Artistic Developer Loading Screen
    ========================================================= */
 
 @font-face {
@@ -26,11 +26,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #0c0b08;
+  background-color: #060913;
+  background-image: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.09) 0%, rgba(6, 9, 19, 1) 75%);
   color: #ebd078;
   user-select: none;
   overflow: hidden;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 1. Center text: CRAFTED BY */
@@ -38,14 +39,14 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(0.72rem, 1.4vw, 0.88rem);
   font-weight: 600;
-  letter-spacing: 0.42em;
+  letter-spacing: 0.45em;
   text-transform: uppercase;
-  color: #bfa668;
-  margin-bottom: -0.25rem;
+  color: #94a3b8;
+  margin-bottom: -0.4rem;
   opacity: 0;
-  transform: translateY(4px);
-  animation: craftedFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards,
-             craftedPulse 2.8s ease-in-out 0.85s infinite;
+  transform: translateY(5px);
+  animation: craftedFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards,
+             craftedPulse 3.2s ease-in-out 1.05s infinite;
 }
 
 @keyframes craftedFadeIn {
@@ -66,30 +67,31 @@
 
 /* 2. Signature & Arrow SVG Canvas */
 .signature-svg-container {
-  width: min(520px, 92vw);
+  width: min(580px, 94vw);
   height: auto;
   overflow: visible;
-  filter: drop-shadow(0 0 16px rgba(226, 191, 101, 0.35));
+  filter: drop-shadow(0 0 16px rgba(226, 191, 101, 0.32));
 }
 
-/* 2a. Handwriting Text Reveal Mask */
-.stroke-reveal-mask {
-  stroke-dasharray: 680;
-  stroke-dashoffset: 680;
-  animation: drawGiriText 1.25s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
+/* 2a. Smooth Artistic Left-to-Right Reveal for Giri */
+.clip-revealer {
+  animation: expandClip 1.4s cubic-bezier(0.35, 0, 0.2, 1) 0.5s forwards;
 }
 
-@keyframes drawGiriText {
+@keyframes expandClip {
+  from {
+    width: 0;
+  }
   to {
-    stroke-dashoffset: 0;
+    width: 600px;
   }
 }
 
 /* 2b. The Arched Arrow Shaft */
 .stroke-arrow-shaft {
-  stroke-dasharray: 540;
-  stroke-dashoffset: 540;
-  animation: drawArrowShaft 0.85s cubic-bezier(0.35, 0, 0.2, 1) 1.55s forwards;
+  stroke-dasharray: 560;
+  stroke-dashoffset: 560;
+  animation: drawArrowShaft 0.95s cubic-bezier(0.35, 0, 0.2, 1) 1.65s forwards;
 }
 
 @keyframes drawArrowShaft {
@@ -98,45 +100,16 @@
   }
 }
 
-/* 2c. The Stylish Arrowhead */
+/* 2c. The Hand-Drawn Arrowhead */
 .stroke-arrowhead {
   stroke-dasharray: 90;
   stroke-dashoffset: 90;
-  animation: drawArrowhead 0.35s ease 2.32s forwards;
+  animation: drawArrowhead 0.35s ease 2.45s forwards;
 }
 
 @keyframes drawArrowhead {
   to {
     stroke-dashoffset: 0;
-  }
-}
-
-/* Subtle Skip Button */
-.skip-loading-btn {
-  position: absolute;
-  bottom: 2.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #786b49;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.4rem 0.8rem;
-  border-radius: 9999px;
-  transition: all 0.2s ease;
-  opacity: 0;
-  animation: fadeInSkip 0.6s ease 1.4s forwards;
-}
-
-.skip-loading-btn:hover {
-  color: #ebd078;
-  background: rgba(235, 208, 120, 0.08);
-}
-
-@keyframes fadeInSkip {
-  to {
-    opacity: 0.7;
   }
 }
 
@@ -147,14 +120,13 @@
     animation: none;
     transform: none;
   }
-  .stroke-reveal-mask,
+  .clip-revealer {
+    width: 600px;
+    animation: none;
+  }
   .stroke-arrow-shaft,
   .stroke-arrowhead {
     stroke-dashoffset: 0;
-    animation: none;
-  }
-  .skip-loading-btn {
-    opacity: 0.7;
     animation: none;
   }
 }
