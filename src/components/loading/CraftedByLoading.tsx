@@ -61,89 +61,90 @@ export default function CraftedByLoading({
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
-              {/* Luminous Signature Gradient */}
-              <linearGradient id="realSigGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#818cf8" />
-                <stop offset="50%" stopColor="#a5b4fc" />
-                <stop offset="100%" stopColor="#38bdf8" />
+              {/* Luminous Gold Signature Gradient from Giri's Reference */}
+              <linearGradient id="goldSigGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#fcedb4" />
+                <stop offset="50%" stopColor="#e6c670" />
+                <stop offset="100%" stopColor="#d4af37" />
               </linearGradient>
 
-              {/* Ambient Glow */}
-              <filter id="realSigGlow" x="-20%" y="-20%" width="140%" height="140%">
+              {/* Ambient Warm Golden Glow */}
+              <filter id="goldSigGlow" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="2.5" result="blur" />
                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
               </filter>
             </defs>
 
-            {/* 1. Letter G — Authentic cursive loop, bowl and descender */}
+            {/* 1. Capital Letter G — Authentic cursive loop, apex crown, body bowl & lower swoosh */}
             <path
               className={styles.strokeG}
-              d="M 90 85 C 80 50, 105 32, 130 32 C 155 32, 168 55, 155 82 C 142 108, 105 106, 94 92 C 86 80, 108 72, 134 74 C 146 75, 138 112, 126 142 C 112 172, 88 170, 78 155 C 68 138, 86 120, 130 108 C 142 104, 150 100, 156 96"
-              stroke="url(#realSigGradient)"
+              d="M 125 148 C 108 128, 128 58, 160 40 C 178 30, 192 42, 186 65 C 178 95, 142 122, 168 138 C 192 148, 208 126, 200 95 C 196 82, 184 82, 179 92 C 170 110, 184 145, 168 180 C 156 204, 134 200, 128 182 C 122 160, 148 148, 196 146"
+              stroke="url(#goldSigGradient)"
               strokeWidth="3.6"
               strokeLinecap="round"
               strokeLinejoin="round"
-              filter="url(#realSigGlow)"
+              filter="url(#goldSigGlow)"
             />
 
             {/* 2. Letter i (first) — Natural connected entry, stem, exit */}
             <path
               className={styles.strokeI1}
-              d="M 156 96 C 160 88, 166 74, 172 68 C 174 78, 173 96, 176 106 C 178 110, 184 112, 190 106"
-              stroke="url(#realSigGradient)"
+              d="M 196 146 C 206 132, 218 108, 226 100 C 229 114, 227 138, 230 148 C 233 154, 240 156, 248 146"
+              stroke="url(#goldSigGradient)"
               strokeWidth="3.4"
               strokeLinecap="round"
               strokeLinejoin="round"
-              filter="url(#realSigGlow)"
+              filter="url(#goldSigGlow)"
             />
 
             {/* 3. Letter r — Organic cursive crest and stem */}
             <path
               className={styles.strokeR}
-              d="M 190 106 C 194 98, 200 76, 208 68 C 212 64, 222 66, 224 72 C 225 80, 221 96, 224 106 C 226 110, 232 112, 238 106"
-              stroke="url(#realSigGradient)"
+              d="M 248 146 C 254 134, 262 106, 272 101 C 277 98, 288 100, 291 106 C 292 115, 288 136, 292 148 C 295 154, 302 156, 310 146"
+              stroke="url(#goldSigGradient)"
               strokeWidth="3.4"
               strokeLinecap="round"
               strokeLinejoin="round"
-              filter="url(#realSigGlow)"
+              filter="url(#goldSigGlow)"
             />
 
             {/* 4. Letter i (second) — Connected stem flowing toward flourish */}
             <path
               className={styles.strokeI2}
-              d="M 238 106 C 242 98, 248 74, 254 68 C 256 78, 255 96, 258 106 C 260 110, 264 112, 270 106"
-              stroke="url(#realSigGradient)"
+              d="M 310 146 C 316 134, 326 108, 334 100 C 337 114, 335 138, 338 148 C 341 154, 348 156, 358 146"
+              stroke="url(#goldSigGradient)"
               strokeWidth="3.4"
               strokeLinecap="round"
               strokeLinejoin="round"
-              filter="url(#realSigGlow)"
+              filter="url(#goldSigGlow)"
             />
 
-            {/* 5. Natural pen dots on both i's */}
+            {/* 5. Golden pen dots on both i's */}
             <g className={styles.strokeDots}>
-              <circle cx="173" cy="52" r="2.8" fill="#38bdf8" />
-              <circle cx="255" cy="52" r="2.8" fill="#38bdf8" />
+              <circle cx="227" cy="85" r="3.2" fill="#fcedb4" />
+              <circle cx="335" cy="85" r="3.2" fill="#fcedb4" />
             </g>
 
-            {/* 6. Curved Flourish Arrow — Natural continuation of the signature stroke */}
+            {/* 6. Curved Flourish Arrow — Flowing convex underline arch matching Giri reference image */}
             <path
               className={styles.strokeArrow}
-              d="M 270 106 C 282 120, 274 134, 236 144 C 176 158, 101 156, 51 146 C 30 142, 26 154, 36 164 C 60 178, 136 182, 231 172 C 326 162, 411 140, 464 100 C 486 82, 496 62, 488 44"
-              stroke="url(#realSigGradient)"
+              d="M 40 185 Q 260 166, 480 182"
+              stroke="url(#goldSigGradient)"
+              strokeWidth="3.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              filter="url(#goldSigGlow)"
+            />
+
+            {/* 7. Stylish Hand-drawn Arrowhead */}
+            <path
+              className={styles.strokeArrowhead}
+              d="M 445 170 Q 470 178, 480 182 C 476 195, 468 208, 472 216"
+              stroke="url(#goldSigGradient)"
               strokeWidth="3.0"
               strokeLinecap="round"
               strokeLinejoin="round"
-              filter="url(#realSigGlow)"
-            />
-
-            {/* 7. Hand-drawn Arrowhead */}
-            <path
-              className={styles.strokeArrowhead}
-              d="M 464 50 C 478 46, 485 44, 488 44 C 486 54, 482 64, 478 70"
-              stroke="#38bdf8"
-              strokeWidth="2.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              filter="url(#goldSigGlow)"
             />
           </svg>
 

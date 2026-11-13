@@ -10,16 +10,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #060913;
-  background-image: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, rgba(6, 9, 19, 1) 75%);
+  background-color: #070605;
+  background-image: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 0%, rgba(7, 6, 5, 1) 75%);
   color: #f8fafc;
   user-select: none;
   overflow: hidden;
 }
 
-:global(.light) .screen {
-  background-color: #f8fafc;
-  background-image: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, rgba(248, 250, 252, 1) 75%);
+:global(.light) .screen,
+:global([data-theme="light"]) .screen {
+  background-color: #fcfaf6;
+  background-image: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.09) 0%, rgba(252, 250, 246, 1) 75%);
   color: #0f172a;
 }
 
@@ -38,7 +39,7 @@
   font-weight: 600;
   letter-spacing: 0.45em;
   text-transform: uppercase;
-  color: #94a3b8;
+  color: #dcd3b8;
   margin-bottom: -0.3rem;
   opacity: 0;
   transform: translateY(5px);
@@ -46,23 +47,24 @@
              labelBreathe 3.2s ease-in-out 0.9s infinite;
 }
 
-:global(.light) .craftedLabel {
-  color: #64748b;
+:global(.light) .craftedLabel,
+:global([data-theme="light"]) .craftedLabel {
+  color: #8c7b4a;
 }
 
 @keyframes labelEnter {
   to {
-    opacity: 0.88;
+    opacity: 0.92;
     transform: translateY(0);
   }
 }
 
 @keyframes labelBreathe {
   0%, 100% {
-    opacity: 0.45;
+    opacity: 0.5;
   }
   50% {
-    opacity: 0.95;
+    opacity: 1;
   }
 }
 
@@ -79,47 +81,48 @@
   width: 100%;
   height: auto;
   overflow: visible;
-  filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.35));
+  filter: drop-shadow(0 0 16px rgba(229, 195, 101, 0.42));
 }
 
-:global(.light) .svgCanvas {
-  filter: drop-shadow(0 0 14px rgba(79, 70, 229, 0.25));
+:global(.light) .svgCanvas,
+:global([data-theme="light"]) .svgCanvas {
+  filter: drop-shadow(0 0 12px rgba(184, 150, 40, 0.3));
 }
 
 /* Sequential SVG Path Drawing Animations */
 
-/* Letter G */
+/* Capital Letter G */
 .strokeG {
-  stroke-dasharray: 430;
-  stroke-dashoffset: 430;
-  animation: drawStroke 0.85s cubic-bezier(0.42, 0, 0.18, 1) 0.42s forwards;
+  stroke-dasharray: 580;
+  stroke-dashoffset: 580;
+  animation: drawStroke 0.95s cubic-bezier(0.42, 0, 0.18, 1) 0.35s forwards;
 }
 
 /* Letter i (1) */
 .strokeI1 {
-  stroke-dasharray: 105;
-  stroke-dashoffset: 105;
-  animation: drawStroke 0.3s cubic-bezier(0.42, 0, 0.18, 1) 1.25s forwards;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: drawStroke 0.3s cubic-bezier(0.42, 0, 0.18, 1) 1.3s forwards;
 }
 
 /* Letter r */
 .strokeR {
-  stroke-dasharray: 125;
-  stroke-dashoffset: 125;
-  animation: drawStroke 0.32s cubic-bezier(0.42, 0, 0.18, 1) 1.52s forwards;
+  stroke-dasharray: 135;
+  stroke-dashoffset: 135;
+  animation: drawStroke 0.32s cubic-bezier(0.42, 0, 0.18, 1) 1.58s forwards;
 }
 
 /* Letter i (2) */
 .strokeI2 {
-  stroke-dasharray: 105;
-  stroke-dashoffset: 105;
-  animation: drawStroke 0.3s cubic-bezier(0.42, 0, 0.18, 1) 1.82s forwards;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: drawStroke 0.3s cubic-bezier(0.42, 0, 0.18, 1) 1.88s forwards;
 }
 
 /* Dots on the i's */
 .strokeDots {
   opacity: 0;
-  animation: dropDots 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) 2.1s forwards;
+  animation: dropDots 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) 2.15s forwards;
 }
 
 @keyframes dropDots {
@@ -133,18 +136,18 @@
   }
 }
 
-/* Curved Flourish Arrow */
+/* Curved Flourish Arrow Underline */
 .strokeArrow {
-  stroke-dasharray: 690;
-  stroke-dashoffset: 690;
-  animation: drawStroke 0.82s cubic-bezier(0.35, 0, 0.2, 1) 2.15s forwards;
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
+  animation: drawStroke 0.75s cubic-bezier(0.35, 0, 0.2, 1) 2.18s forwards;
 }
 
 /* Arrowhead */
 .strokeArrowhead {
-  stroke-dasharray: 85;
-  stroke-dashoffset: 85;
-  animation: drawStroke 0.28s ease 2.92s forwards;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  animation: drawStroke 0.26s ease 2.85s forwards;
 }
 
 @keyframes drawStroke {
@@ -173,59 +176,59 @@
   width: 5px;
   height: 5px;
   border-radius: 9999px;
-  background-color: #38bdf8;
-  box-shadow: 0 0 10px #38bdf8, 0 0 20px #818cf8;
+  background-color: #fcedb4;
+  box-shadow: 0 0 10px #fcedb4, 0 0 20px #d4af37;
   opacity: 0;
-  animation: movePen 2.45s cubic-bezier(0.4, 0, 0.2, 1) 0.42s forwards;
+  animation: movePen 2.45s cubic-bezier(0.4, 0, 0.2, 1) 0.38s forwards;
 }
 
 @keyframes movePen {
   0% {
-    left: 17%;
-    top: 35%;
-    opacity: 1;
-  }
-  35% {
-    left: 29%;
-    top: 42%;
-    opacity: 1;
-  }
-  50% {
-    left: 36%;
-    top: 42%;
-    opacity: 1;
-  }
-  65% {
-    left: 44%;
-    top: 42%;
-    opacity: 1;
-  }
-  75% {
-    left: 50%;
-    top: 42%;
-    opacity: 1;
-  }
-  85% {
-    left: 15%;
+    left: 23%;
     top: 60%;
     opacity: 1;
   }
-  95% {
-    left: 78%;
-    top: 40%;
+  15% {
+    left: 30%;
+    top: 20%;
+    opacity: 1;
+  }
+  35% {
+    left: 36%;
+    top: 60%;
+    opacity: 1;
+  }
+  50% {
+    left: 42%;
+    top: 60%;
+    opacity: 1;
+  }
+  65% {
+    left: 54%;
+    top: 60%;
+    opacity: 1;
+  }
+  78% {
+    left: 66%;
+    top: 60%;
+    opacity: 1;
+  }
+  92% {
+    left: 88%;
+    top: 75%;
     opacity: 1;
   }
   100% {
-    left: 90%;
-    top: 18%;
-    opacity: 1;
+    left: 89%;
+    top: 78%;
+    opacity: 0;
   }
 }
 
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .craftedLabel {
-    opacity: 0.88;
+    opacity: 0.92;
     animation: none;
     transform: none;
   }
@@ -235,14 +238,15 @@
   .strokeI2,
   .strokeArrow,
   .strokeArrowhead {
-    stroke-dashoffset: 0;
-    animation: none;
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
   }
   .strokeDots {
-    opacity: 1;
-    animation: none;
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
   }
   .penTipGuide {
-    display: none;
+    display: none !important;
   }
 }

@@ -30,12 +30,12 @@ export default function Home() {
       </AnimatePresence>
 
       {/* 2. Main Portfolio Application */}
-      <div className="min-h-screen bg-[#060913] dark:bg-[#060913] light:bg-slate-50 text-slate-100 dark:text-slate-100 light:text-slate-900 transition-colors duration-300 font-sans selection:bg-indigo-500 selection:text-white">
+      <div className="min-h-screen bg-slate-50 dark:bg-[#060913] text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans selection:bg-indigo-500 selection:text-white">
         {/* Subtle Ambient Background Gradient Orbs */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-          <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/15 dark:bg-indigo-600/15 light:bg-indigo-600/5 rounded-full blur-3xl" />
-          <div className="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-600/10 dark:bg-cyan-600/10 light:bg-cyan-600/5 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 left-1/3 w-96 h-96 bg-violet-600/15 dark:bg-violet-600/15 light:bg-violet-600/5 rounded-full blur-3xl" />
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-400/15 dark:bg-indigo-600/15 rounded-full blur-3xl" />
+          <div className="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-400/10 dark:bg-cyan-600/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 left-1/3 w-96 h-96 bg-violet-400/15 dark:bg-violet-600/15 rounded-full blur-3xl" />
         </div>
 
         {/* Navigation Bar */}

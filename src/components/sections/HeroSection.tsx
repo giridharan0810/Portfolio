@@ -22,21 +22,21 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-slate-100 dark:text-slate-100 light:text-slate-900 transition-colors">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-slate-900 dark:text-slate-100 transition-colors">
               Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-teal-300 bg-clip-text text-transparent">
-                {siteConfig.name}
+              <span className="bg-gradient-to-r from-indigo-500 via-sky-500 to-teal-400 bg-clip-text text-transparent">
+                {siteConfig.fullName}
               </span>
-              <span className="block text-2xl sm:text-3xl lg:text-4xl mt-3 font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700">
+              <span className="block text-2xl sm:text-3xl lg:text-4xl mt-3 font-semibold text-slate-700 dark:text-slate-300">
                 {siteConfig.title}
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-600 max-w-2xl transition-colors">
-              Full Stack Developer with <strong className="text-indigo-400 font-semibold">2 years of professional experience</strong> developing scalable web applications using{" "}
-              <strong className="text-white dark:text-white light:text-slate-900">React.js, JavaScript, Node.js, Express.js</strong>, and{" "}
-              <strong className="text-white dark:text-white light:text-slate-900">Microsoft SQL Server</strong>.
+            <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl transition-colors">
+              Full Stack Developer with <strong className="text-indigo-600 dark:text-indigo-400 font-semibold">2 years of professional experience</strong> developing scalable web applications using{" "}
+              <strong className="text-slate-900 dark:text-white">React.js, JavaScript, Node.js, Express.js</strong>, and{" "}
+              <strong className="text-slate-900 dark:text-white">Microsoft SQL Server</strong>.
               Experienced in building high-throughput REST APIs, JWT authentication, role-based access control, and enterprise business solutions.
             </p>
 
@@ -53,15 +53,15 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
 
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl font-semibold text-sm border border-slate-700/60 dark:border-slate-800 light:border-slate-300 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white text-slate-200 dark:text-slate-200 light:text-slate-800 hover:border-indigo-400 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl font-semibold text-sm border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/80 text-slate-800 dark:text-slate-200 hover:border-indigo-400 transition-all cursor-pointer shadow-sm"
               >
-                <Eye className="w-4 h-4 text-indigo-400" />
+                <Eye className="w-4 h-4 text-indigo-500" />
                 Preview Resume
               </button>
 
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl font-semibold text-sm border border-slate-800/80 dark:border-slate-800/80 light:border-slate-300 bg-transparent text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white transition-all"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl font-semibold text-sm border border-slate-300 dark:border-slate-800 bg-transparent text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-all"
               >
                 View Projects
                 <ArrowRight className="w-4 h-4" />
@@ -69,29 +69,29 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
             </div>
 
             {/* Meta bar */}
-            <div className="pt-4 flex flex-wrap items-center gap-4 text-xs text-slate-400">
+            <div className="pt-4 flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
               <div className="flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-indigo-400" />
+                <MapPin className="w-3.5 h-3.5 text-indigo-500" />
                 <span>{siteConfig.location}</span>
               </div>
-              <div className="h-3 w-px bg-slate-800 hidden sm:block" />
+              <div className="h-3 w-px bg-slate-300 dark:bg-slate-800 hidden sm:block" />
               <a
                 href={siteConfig.github}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white transition-colors"
+                className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors"
               >
-                <Github className="w-3.5 h-3.5 text-indigo-400" />
+                <Github className="w-3.5 h-3.5 text-indigo-500" />
                 <span>GitHub Profile</span>
               </a>
-              <div className="h-3 w-px bg-slate-800 hidden sm:block" />
+              <div className="h-3 w-px bg-slate-300 dark:bg-slate-800 hidden sm:block" />
               <a
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white transition-colors"
+                className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors"
               >
-                <Linkedin className="w-3.5 h-3.5 text-indigo-400" />
+                <Linkedin className="w-3.5 h-3.5 text-indigo-500" />
                 <span>LinkedIn Profile</span>
               </a>
             </div>
@@ -102,20 +102,20 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
             <div className="relative">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-20 blur-xl" />
 
-              <div className="relative rounded-3xl border border-slate-800 dark:border-slate-800 light:border-slate-200 p-7 sm:p-8 backdrop-blur-xl bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/95 shadow-2xl transition-colors">
-                <div className="flex items-start justify-between pb-6 border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-200">
+              <div className="relative rounded-3xl border border-slate-200 dark:border-slate-800 p-7 sm:p-8 backdrop-blur-xl bg-white/95 dark:bg-slate-900/80 shadow-2xl transition-colors">
+                <div className="flex items-start justify-between pb-6 border-b border-slate-200 dark:border-slate-800/80">
                   <div className="space-y-1">
-                    <span className="text-xs uppercase font-bold tracking-wider text-indigo-400">
+                    <span className="text-xs uppercase font-bold tracking-wider text-indigo-600 dark:text-indigo-400">
                       Developer Profile
                     </span>
-                    <h3 className="text-xl font-bold text-white dark:text-white light:text-slate-900">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                       {siteConfig.fullName}
                     </h3>
-                    <p className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-600">
+                    <p className="text-xs text-slate-600 dark:text-slate-400">
                       {siteConfig.title} · {siteConfig.company}
                     </p>
                   </div>
-                  <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400">
                     Active
                   </span>
                 </div>
@@ -125,12 +125,12 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
                   {siteConfig.stats.map((s) => (
                     <div
                       key={s.label}
-                      className="p-3.5 rounded-2xl bg-indigo-950/20 dark:bg-indigo-950/20 light:bg-indigo-50/60 border border-indigo-800/30 dark:border-indigo-800/30 light:border-indigo-200"
+                      className="p-3.5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/20 border border-indigo-200/80 dark:border-indigo-800/30"
                     >
-                      <div className="text-2xl font-black text-white dark:text-white light:text-slate-900">
+                      <div className="text-2xl font-black text-slate-900 dark:text-white">
                         {s.value}
                       </div>
-                      <div className="text-xs text-slate-400 dark:text-slate-400 light:text-slate-600 mt-0.5">
+                      <div className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
                         {s.label}
                       </div>
                     </div>
@@ -139,7 +139,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
 
                 {/* Tech chips */}
                 <div className="space-y-3 pt-2">
-                  <span className="text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700">
+                  <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                     Primary Tech Stack
                   </span>
                   <div className="flex flex-wrap gap-1.5">
@@ -147,7 +147,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
                       (tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-800/90 dark:bg-slate-800/90 light:bg-slate-100 text-slate-200 dark:text-slate-200 light:text-slate-800 border border-slate-700/60 dark:border-slate-700/60 light:border-slate-200"
+                          className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700/60"
                         >
                           {tech}
                         </span>

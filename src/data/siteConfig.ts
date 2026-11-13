@@ -1,6 +1,7 @@
 export const siteConfig = {
-  name: "Giri",
+  name: "Giridharan S",
   fullName: "Giridharan S",
+  brandName: "Giri",
   title: "Full Stack Developer",
   tagline: "Building scalable enterprise CRMs, resilient REST APIs, and modern high-performance web applications.",
   company: "VConnex Software Solutions",
@@ -26,11 +27,12 @@ export const siteConfig = {
     { label: "Full Stack Coverage", value: "100%" },
   ],
   seo: {
-    title: "Giri | Full Stack Developer",
-    description: "Portfolio of Giri (Giridharan S) – Full Stack Developer with 2 years of experience engineering enterprise CRMs, ERPs, REST APIs, and web apps with React.js, JavaScript, Node.js, Express.js, and SQL Server.",
+    title: "Giridharan S | Full Stack Developer",
+    description: "Portfolio of Giridharan S – Full Stack Developer with 2 years of experience engineering enterprise CRMs, ERPs, REST APIs, and web apps with React.js, JavaScript, Node.js, Express.js, and SQL Server.",
     keywords: [
-      "Giri",
       "Giridharan S",
+      "Giridharan",
+      "Giri",
       "Full Stack Developer",
       "React.js Developer",
       "Node.js Developer",

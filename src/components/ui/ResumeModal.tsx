@@ -30,24 +30,24 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-4xl max-h-[90vh] flex flex-col rounded-3xl bg-[#090e1c] border border-slate-700 shadow-2xl overflow-hidden z-10"
+          className="relative w-full max-w-4xl max-h-[90vh] flex flex-col rounded-3xl bg-white dark:bg-[#090e1c] border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden z-10"
         >
           {/* Header */}
-          <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-900/90 shrink-0">
+          <div className="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/90 shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-400">
+              <div className="w-8 h-8 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
                 <FileText className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white">Giri (Giridharan S) – Resume</h4>
-                <span className="text-[11px] text-slate-400">Full Stack Developer • ATS Formatted</span>
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Giridharan S – Resume</h4>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400">Full Stack Developer • ATS Formatted</span>
               </div>
             </div>
 
             <div className="flex items-center gap-2">
               <button
                 onClick={() => window.print()}
-                className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+                className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors"
                 title="Print Resume"
                 aria-label="Print Resume"
               >
@@ -65,7 +65,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
               <button
                 onClick={onClose}
-                className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors ml-1"
+                className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors ml-1"
                 aria-label="Close Modal"
               >
                 <X className="w-5 h-5" />
@@ -74,13 +74,13 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           </div>
 
           {/* Scrollable Body */}
-          <div className="overflow-y-auto p-6 sm:p-10 space-y-8 bg-[#0b1122] text-slate-200 text-sm">
+          <div className="overflow-y-auto p-6 sm:p-10 space-y-8 bg-slate-50/50 dark:bg-[#0b1122] text-slate-800 dark:text-slate-200 text-sm">
             {/* Header info */}
-            <div className="border-b border-indigo-500/30 pb-6">
+            <div className="border-b border-indigo-200 dark:border-indigo-500/30 pb-6">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-extrabold text-white">GIRIDHARAN S (GIRI)</h1>
-                  <div className="text-indigo-400 font-semibold text-base mt-0.5">Full Stack Developer</div>
+                  <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">GIRIDHARAN S</h1>
+                  <div className="text-indigo-600 dark:text-indigo-400 font-semibold text-base mt-0.5">Full Stack Developer</div>
                 </div>
                 <div className="text-xs text-slate-400 space-y-1 sm:text-right">
                   <div>Email: <a href={`mailto:${siteConfig.email}`} className="text-indigo-300 hover:underline">{siteConfig.email}</a></div>
