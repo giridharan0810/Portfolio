@@ -1,92 +1,165 @@
-@font-face {
-  font-family: 'Playwrite DE SAS';
-  /* font files are in public/font/ - use rooted path */
-  src: url('/font/Charm-Regular.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* =========================================================
+   Crafted by Giri - Premium Minimal Developer Loading Screen
+   ========================================================= */
 
-.animated-overlay {
+.crafted-loading-screen {
   position: fixed;
   inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, rgba(10,10,10,1), rgba(10,10,10,0.95));
   z-index: 9999;
-}
-
-.animated-name {
-  font-family: 'Playwrite DE SAS', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 400;
   display: flex;
-  gap: 6px;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  color: white;
-  line-height: 1;
-  letter-spacing: 0.5px;
+  justify-content: center;
+  background-color: #060913;
+  color: #f8fafc;
+  user-select: none;
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.letter {
-  display: inline-block;
+/* 1. Center text: CRAFTED BY */
+.crafted-text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 0.85rem;
   opacity: 0;
-  transform: translateY(-16px);
-  animation: fadeInUp 0.45s forwards cubic-bezier(.2,.8,.2,1);
+  transform: translateY(6px);
+  animation: craftedFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards,
+             craftedPulse 2.8s ease-in-out 0.95s infinite;
 }
 
-/* Provide nth-child delays up to 30 characters */
-.letter:nth-child(1)  { animation-delay: 0s; }
-.letter:nth-child(2)  { animation-delay: 0.06s; }
-.letter:nth-child(3)  { animation-delay: 0.12s; }
-.letter:nth-child(4)  { animation-delay: 0.18s; }
-.letter:nth-child(5)  { animation-delay: 0.24s; }
-.letter:nth-child(6)  { animation-delay: 0.30s; }
-.letter:nth-child(7)  { animation-delay: 0.36s; }
-.letter:nth-child(8)  { animation-delay: 0.42s; }
-.letter:nth-child(9)  { animation-delay: 0.48s; }
-.letter:nth-child(10) { animation-delay: 0.54s; }
-.letter:nth-child(11) { animation-delay: 0.60s; }
-.letter:nth-child(12) { animation-delay: 0.66s; }
-.letter:nth-child(13) { animation-delay: 0.72s; }
-.letter:nth-child(14) { animation-delay: 0.78s; }
-.letter:nth-child(15) { animation-delay: 0.84s; }
-.letter:nth-child(16) { animation-delay: 0.90s; }
-.letter:nth-child(17) { animation-delay: 0.96s; }
-.letter:nth-child(18) { animation-delay: 1.02s; }
-.letter:nth-child(19) { animation-delay: 1.08s; }
-.letter:nth-child(20) { animation-delay: 1.14s; }
-.letter:nth-child(21) { animation-delay: 1.20s; }
-.letter:nth-child(22) { animation-delay: 1.26s; }
-.letter:nth-child(23) { animation-delay: 1.32s; }
-.letter:nth-child(24) { animation-delay: 1.38s; }
-.letter:nth-child(25) { animation-delay: 1.44s; }
-.letter:nth-child(26) { animation-delay: 1.50s; }
-.letter:nth-child(27) { animation-delay: 1.56s; }
-.letter:nth-child(28) { animation-delay: 1.62s; }
-.letter:nth-child(29) { animation-delay: 1.68s; }
-.letter:nth-child(30) { animation-delay: 1.74s; }
+@keyframes craftedFadeIn {
+  to {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
 
-@keyframes fadeInUp {
+@keyframes craftedPulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+/* 2. Signature SVG Canvas */
+.signature-svg-container {
+  width: min(440px, 86vw);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.3));
+}
+
+/* Phase 2: Handwriting Signature "Giri" */
+.stroke-signature {
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  animation: drawSignature 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+}
+
+@keyframes drawSignature {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Phase 3: Delicate Dots for the 'i's */
+.stroke-dots {
+  opacity: 0;
+  animation: dropDots 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) 1.6s forwards;
+}
+
+@keyframes dropDots {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.skip-btn {
-  position: absolute;
-  right: 1.25rem;
-  top: 1.25rem;
-  background: rgba(255,255,255,0.06);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 0.45rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  cursor: pointer;
+/* Phase 4: Sweeping Flourish Curved Arrow */
+.stroke-arrow-curve {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: drawArrowCurve 1.05s cubic-bezier(0.4, 0, 0.2, 1) 1.65s forwards;
 }
 
+@keyframes drawArrowCurve {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
+/* Phase 5: Stylish Arrowhead Flick */
+.stroke-arrowhead {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: drawArrowhead 0.35s ease 2.5s forwards;
+}
+
+@keyframes drawArrowhead {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Subtle Skip Button */
+.skip-loading-btn {
+  position: absolute;
+  bottom: 2.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  animation: fadeInSkip 0.6s ease 1.5s forwards;
+}
+
+.skip-loading-btn:hover {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeInSkip {
+  to {
+    opacity: 0.7;
+  }
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .crafted-text {
+    opacity: 0.85;
+    animation: none;
+    transform: none;
+  }
+  .stroke-signature,
+  .stroke-arrow-curve,
+  .stroke-arrowhead {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .stroke-dots {
+    opacity: 1;
+    animation: none;
+  }
+  .skip-loading-btn {
+    opacity: 0.7;
+    animation: none;
+  }
+}

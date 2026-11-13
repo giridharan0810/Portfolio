@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 import { db } from "./firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import CraftedByLoading from "./CraftedByLoading";
 
 // Resume and Social Links
 const RESUME_PDF_PATH = "/Giridharan_S_Resume.pdf";
@@ -253,6 +254,7 @@ const SOFT_SKILLS = [
 ];
 
 export default function Portfolio() {
+  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeProjectTab, setActiveProjectTab] = useState("all");
@@ -313,7 +315,17 @@ export default function Portfolio() {
   });
 
   return (
-    <div className={`min-h-screen ${darkMode ? "bg-[#060913] text-slate-100" : "bg-slate-50 text-slate-900"} transition-colors duration-300 font-sans`}>
+    <>
+      <AnimatePresence mode="wait">
+        {loading && (
+          <CraftedByLoading
+            key="crafted-loader"
+            onComplete={() => setLoading(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <div className={`min-h-screen ${darkMode ? "bg-[#060913] text-slate-100" : "bg-slate-50 text-slate-900"} transition-colors duration-300 font-sans`}>
       {/* Background ambient gradient orbs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl" />
@@ -1531,5 +1543,6 @@ export default function Portfolio() {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 }
